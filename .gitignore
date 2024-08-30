@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+shinylive-*
+.Rprofile
+renv
+renv.lock
+shinylive-iSEE.Rproj
