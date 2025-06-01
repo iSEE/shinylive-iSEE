@@ -1,6 +1,11 @@
 webr::install(
+    c("munsell"),
+    repos = c("https://cwickham.r-universe.dev", 
+              "https://repo.r-wasm.org/")
+)
+webr::install(
     c("SingleCellExperiment", "S4Vectors", "iSEE"),
-    repos = c("https://webr.bioconductor.org/3.19", 
+    repos = c("https://webr.bioconductor.org/3.21", 
               "https://bioc.r-universe.dev", 
               "https://repo.r-wasm.org/")
 )
@@ -8,6 +13,9 @@ library(shiny)
 library(S4Vectors)
 library(iSEE)
 library(SingleCellExperiment)
+library(generics)
+library(GenomeInfoDb)
+library(GenomeInfoDbData)
 sce <- SingleCellExperiment(assays = list(counts = matrix(rnorm(15), 5, 3)),
                             rowData = DataFrame(gene = LETTERS[1:5]),
                             colData = DataFrame(sample = letters[1:3]))
